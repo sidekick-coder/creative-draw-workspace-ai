@@ -62,3 +62,4 @@ Each entry in `paths` represents a single rendered dot along the stroke.
 - The `paths` array is built incrementally during drawing by the active brush's `draw()` function (`BrushDefinition.draw`).
 - Brushes (e.g. `cd.ts`, `pencil.ts`) may vary `size` and `opacity` per dot based on pressure to simulate natural media.
 - The stroke's `color` applies to all paths; individual dots do not have their own color.
+- To draw a continuous stroke, the `paths` array should have closely spaced points (e.g. every 10–20ms during drawing) to ensure smooth rendering.  
